@@ -35,10 +35,12 @@ class Readernaut_Widget extends WP_Widget {
 
 		?>
 		<div style="height: 5px;"></div>
+		<ul>
 		<?php foreach ($books->reader_book as $book_object): ?>
-			<?php $book = $book_object->book_edition; ?>
-			<a href="<?php echo $book->permalink; ?>"><img src="<?php echo $book->covers->cover_small ?>" alt="<?php echo $book->title ?>" /></a>
+		  <?php $book = $book_object->book_edition; ?>
+		  <li><a href="<?php echo $book->permalink; ?>" title="<?php echo $book->title ?>"><img src="<?php echo $book->covers->cover_small ?>" alt="<?php echo $book->title ?>" /></a></li>
 		<?php endforeach ?>
+		 </ul>
 		<?php
 
 		echo $after_widget;
