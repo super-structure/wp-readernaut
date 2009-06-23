@@ -25,7 +25,7 @@ class Readernaut_Widget extends WP_Widget {
 		extract($args);
 		$user = $instance['user'];
 		$category = $instance['category'];
-		$title = 'Readernaut: ' . ucwords($category);
+		$title = '<a href="http://readernaut.com/' . $user . '/books/' . $category . '/">Readernaut:  ' . ucwords($category) . '</a>';
 		
 		echo $before_widget;
 		echo $before_title . $title . $after_title;
